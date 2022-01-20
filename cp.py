@@ -25,28 +25,6 @@ class Main(object):
 	"""
 		return logo
 		
-		print('\n'+'\033[1;31m'+' 	  	 This File is lock !'+'\033[0m'+'\n'+'\033[1;36m'+'please!'+'\033[0m'+'\033[1;32m'+' Enter The correct username and password:'+'\033[0m')
-print("")
-print("This Tool Is Paid")
-import getpass
-n=5
-while n<10:
-	username="Hasan"
-	password="Hasan"
-	
-	
-	intusername=str(getpass.getpass('\n'+'\033[1;33m'+'Enter The Username:'+'\033[0m'))
-	intpassword=str(getpass.getpass('\033[1;33m'+'Enter The Password:'+'\033[0m'))
-	
-	if username==intusername and password==intpassword:
-		print('\033[1;32m','\nLogin sussecful','\033[0m'+'(😍)')
-		print('\n')
-		break
-		
-	else:
-		print('\033[1;31m','\nYour username or password is Wrong!','\033[0m'+'(😥)')
-		print('\n')
-		sys.exit()
 
 class Eksekusi(Main):
 	
