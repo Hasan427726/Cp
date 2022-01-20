@@ -37,7 +37,7 @@ class Eksekusi(Main):
 			"accept-encoding":"gzip, deflate",
 			"accept-language":"id-ID,id;q=0.9",
 			"referer":"https://mbasic.facebook.com/",
-			"user-agent":"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]"
+			"user-agent":"Mozilla/5.0 (Linux; Android 11; M2007J20CG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.87 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]"
 		})
 		soup=par(session.get(self.url+"/login/?next&ref=dbl&fl&refid=8").text,"html.parser")
 		link=soup.find("form",{"method":"post"})
@@ -170,9 +170,9 @@ def menu():
 			elif "|" in x:
 				user,pw=x.split("|")
 			else:
-				exit("\n[!] Tidak tersedia tanda | •\n")
+				exit("\n[!] No sign available | •\n")
 			Eksekusi("https://mbasic.facebook.com",user.replace("\n",""),pw.replace("\n","")).cek_opsi()
-		exit(f" *** Cek akun selesai hasil: \n [+] OK/CP/SALAH: {str(aman)}/{str(cp)}/{str(salah)}\n")
+		exit(f" *** Check the account finished results: \n [+] OK/CP/WRONG: {str(aman)}/{str(cp)}/{str(wrong)}\n")
 	
 if __name__=="__main__":
 	print(Eksekusi("","","").banner())
